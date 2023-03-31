@@ -61,7 +61,7 @@
     color: #fff;
     font-weight: bolder;
     margin: 20px;
-    width: 70%;
+    width: 150px;
     transition:cubic-bezier(1, 0, 0, 1);
     cursor: pointer;
 }
