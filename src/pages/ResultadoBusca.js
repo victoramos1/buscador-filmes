@@ -1,30 +1,23 @@
 
-import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import styles from './Main.module.css'
+import { useEffect, useState } from 'react'
 
 export default function Main(){
 
-        const [filmes, setFilmes] = useState([])
+    const [resultadoBusca, setResultadoBusca] = useState([])
 
-        const API_KEY = process.env.REACT_APP_TMDB_API_KEY
-
-        useEffect(()=>{
-
-            fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=pt-BR&page=1`).then(
-            resposta => resposta.json()).then(
-                dados => setFilmes(dados.results))
-        })
-        
-        let resultadoBusca = []
-        resultadoBusca = filmes
+    useEffect(()=>{
+        let valor = JSON.parse(localStorage.getItem('resultado'))
+        setResultadoBusca(valor)
+    })
 
     return(
         <>
             <Navbar/>
                 <div className={styles.containerNativo}>      
-                    <h1>Filmes populares hoje no The Movie Database</h1>
+                    <h1>Resultado da busca</h1>
                     <div className={styles.containerAjuste}>
                         {resultadoBusca.map((item, index)=>
                             <div className={styles.card} key={index}>
