@@ -1,40 +1,42 @@
-
-import { useEffect, useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import styles from './Main.module.css'
 
-export default function Main(){
+export default function Main() {
 
-        const [filmes, setFilmes] = useState([])
+    const API_KEY = process.env.REACT_APP_TMDB_API_KEY
+    const [filmes, setFilmes] = useState([])
 
-        const API_KEY = process.env.REACT_APP_TMDB_API_KEY
+    useEffect(() => {
+        consultaAPI()
+    }, [])
 
-        useEffect(()=>{
+    function consultaAPI() {
+        fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=pt-BR&page=1`)
+            .then(resposta =>
+                resposta.json())
+            .then(dados => {
+                setFilmes(dados.results)
+            })
+    }
 
-            fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=pt-BR&page=1`).then(
-            resposta => resposta.json()).then(
-                dados => setFilmes(dados.results))
-        })
-        
-        let resultadoBusca = []
-        resultadoBusca = filmes
-
-    return(
+    return (
         <>
-            <Navbar/>
-                <div className={styles.containerNativo}>      
-                    <h1>Filmes populares hoje no The Movie Database</h1>
-                    <div className={styles.containerAjuste}>
-                        {resultadoBusca.map((item, index)=>
-                            <div className={styles.card} key={index}>
-                                <img src={`https://image.tmdb.org/t/p/w200/${item.poster_path}`} alt="Poster do filme"/>
-                                <p>{item.title}</p>
-                                <Link to="/detalhes"><button className={styles.btn}>VER MAIS</button></Link>
-                            </div>
-                        )}
-                    </div>
+            <Navbar />
+            <div className={styles.containerNativo}>
+                <h1>Filmes populares hoje no The Movie Database</h1>
+                <div className={styles.containerAjuste}>
+                    {filmes.map((item, index) =>
+                        <div className={styles.card} key={index}>
+                            <img src={`https://image.tmdb.org/t/p/w200/${item.poster_path}`} alt="Poster do filme" />
+                            <p>{item.title}</p>
+                            <Link to="/detalhes"><button className={styles.btn}>VER MAIS</button></Link>
+                        </div>
+                    )}
                 </div>
+            </div>
+
         </>
     )
 } 
