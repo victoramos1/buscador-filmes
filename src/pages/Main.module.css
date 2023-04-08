@@ -6,7 +6,7 @@
 }
 
 .containerNativo{
-    background-color: #14181c;
+    background-color:#14181c;
     width: 100%;
     height: 100%;
 }
@@ -20,9 +20,9 @@
 
 .containerAjuste{
     margin: 2% auto 0;
-    width: 70%;
+    width: 65%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .card{
@@ -37,6 +37,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+}
+
+.poster{
+    width: 200px;
+    height: 300px;
 }
 
 .card p{

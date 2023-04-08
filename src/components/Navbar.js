@@ -17,8 +17,8 @@ export default function Navbar(props){
         <>
             <div className={styles.divComponentes}>
                 <div className={styles.iconeTitulo}>
-                    <img src={icon} alt="Ícone do site - Um círculo com um claquete"/>
-                    <h1>Buscador de Filmes</h1>
+                <Link to="/"><img src={icon} alt="Ícone do site - Um círculo com um claquete"/></Link>
+                <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}><h1>Buscador de Filmes</h1></Link>
                 </div>
                 <div>
                     <input className={styles.inputDados} ref={valorDigitado}/>

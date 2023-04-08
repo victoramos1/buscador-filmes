@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import styles from './Main.module.css'
 import { useEffect, useState } from 'react'
+import semImagem from '../img/sem-imagem.jpg'
 
 export default function ResultadoBusca() {
 
@@ -25,6 +26,7 @@ export default function ResultadoBusca() {
         setValidador(validador + 1)
     }
   
+    if(resultado.length > 0){
     return (
         <>
             <Navbar renderizarPagina={renderizarPagina}/>
@@ -32,14 +34,21 @@ export default function ResultadoBusca() {
                 <h1>Resultado da busca</h1>
                 <div className={styles.containerAjuste}>
                     {resultado.map((item, index) =>
-                        <div className={styles.card} key={index}>
-                            <img src={`https://image.tmdb.org/t/p/w200/${item.poster_path}`} alt="Poster do filme"/>
-                            <p>{item.title}</p>
-                            <Link to="/detalhes"><button className={styles.btn}>VER MAIS</button></Link>
-                        </div>
+                    <div className={styles.card} key={index}>
+                    {item.poster_path ? <img className={styles.poster} src={`https://image.tmdb.org/t/p/w200/${item.poster_path}`} alt="Poster do filme"/> : <img src={semImagem}/>}
+                    <p>{item.title}</p>
+                    <Link to="/detalhes"><button className={styles.btn}>VER MAIS</button></Link>
+                    </div>
                     )}
                 </div>
             </div>
         </>
-    )
+    )} else {
+        return(
+            <div className={styles.containerNativo}>
+            <h1>Sem resultado</h1>
+            </div>
+        ) 
+        
+    }
 } 
