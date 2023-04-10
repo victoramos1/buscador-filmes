@@ -75,4 +75,18 @@
     transform: scale(1.05);
 }
 
+.semRetorno{
+    background-color: #14181c;
+    width: 100vw;
+    height: 100vh;
+    color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;   
+}
+
+.semRetorno h1{
+    padding: 10%;
+}
+
+
 

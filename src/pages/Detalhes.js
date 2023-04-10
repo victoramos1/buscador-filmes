@@ -1,25 +1,37 @@
+import { useParams } from "react-router-dom"
 import Navbar from "../components/Navbar"
 import styles from "./Detalhes.module.css"
+import { useEffect, useState } from "react"
 
 export default function Detalhes(){
+
+    let { id } = useParams()
+    const API_KEY = process.env.REACT_APP_TMDB_API_KEY
+    const [detalheFilme, setDetalheFilme] = useState('')
+
+    useEffect(()=>{
+        recuperarDetalhes()
+    }, [])
+
+    function recuperarDetalhes(){
+        fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`)
+            .then(resposta => resposta.json())
+            .then(dados => setDetalheFilme(dados))    
+    }
+
     return(
         <div className={styles.containerNativo}>
             <Navbar/>
             <div className={styles.card}>
                 <div className={styles.divImagem}>
-                    <img src="https://m.media-amazon.com/images/I/914oHftat8L.jpg" alt="Foto da capa do filme"/>
+                    <img src={`https://image.tmdb.org/t/p/w500/${detalheFilme.poster_path}`} alt="Foto da capa do filme"/>
                 </div>
                 <div className={styles.divInformacoes}>
-                    <h1>O Lobo de Wall Street</h1>
-                    <h4>Direção: Martin Scorsese</h4>
-                    <h4>Popularidade: 4.7/5</h4>
-                    <h4>Custo: U$ 100.000.000,00</h4>
-                    <h4>Bilheteria: U$ 300.000.000,00</h4>
-                    <p>Sinopse: Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum harum, officiis reiciendis tenetur mollitia excepturi nulla nisi veniam, possimus itaque in accusantium omnis reprehenderit voluptatum. Quos pariatur laudantium non sapiente.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam totam in corporis dolorum ratione eveniet nam expedita. Placeat sed molestiae libero facere amet, provident recusandae vero repudiandae, unde ipsum corporis.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum harum, officiis reiciendis tenetur mollitia excepturi nulla nisi veniam, possimus itaque in accusantium omnis reprehenderit voluptatum. Quos pariatur laudantium non sapiente.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam totam in corporis dolorum ratione eveniet nam expedita. Placeat sed molestiae libero facere amet, provident recusandae vero repudiandae, unde ipsum corporis.
-                    </p>
+                    <h1>{detalheFilme.title}</h1>
+                    <h4>Nota TMDB: {detalheFilme.vote_average} / 10</h4>
+                    <h4>Custo: U$ {detalheFilme.budget}</h4>
+                    <h4>Bilheteria: U$ {detalheFilme.revenue}</h4>
+                    <p>Sinopse: {detalheFilme.overview}</p>
                 </div>
             </div>
         </div>
