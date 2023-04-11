@@ -29,7 +29,7 @@ export default function Main() {
                 <div className={styles.containerAjuste}>
                     {filmes.map((item, index) =>
                         <div className={styles.card} key={index}>
-                            <img className={styles.poster} src={`https://image.tmdb.org/t/p/w200/${item.poster_path}`} alt="Poster do filme" />
+                            <img className={styles.poster} src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`} alt="Poster do filme" />
                             <p>{item.title}</p>
                             <Link to={`/detalhes/${item.id}`}><button className={styles.btn}>VER MAIS</button></Link>
                         </div>

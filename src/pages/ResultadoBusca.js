@@ -35,7 +35,7 @@ export default function ResultadoBusca() {
                 <div className={styles.containerAjuste}>
                     {resultado.map((item, index) =>
                     <div className={styles.card} key={index}>
-                    {item.poster_path ? <img className={styles.poster} src={`https://image.tmdb.org/t/p/w200/${item.poster_path}`} alt="Poster do filme"/> : <img src={semImagem} alt="Sem imagem"/>}
+                    {item.poster_path ? <img className={styles.poster} src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`} alt="Poster do filme"/> : <img src={semImagem} alt="Sem imagem"/>}
                     <p>{item.title}</p>
                     <Link to={`/detalhes/${item.id}`}><button className={styles.btn}>VER MAIS</button></Link>
                     </div>
@@ -46,7 +46,7 @@ export default function ResultadoBusca() {
     )} else {
         return(
             <>
-            <Navbar/>
+            <Navbar renderizarPagina={renderizarPagina}/>
             <div className={styles.semRetorno}>
                 <h1>Sem resultado</h1>
             </div>
