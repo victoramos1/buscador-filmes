@@ -1,140 +1,144 @@
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.containerNativo{
-    background-color: #14181c;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.containerNativo {
+  background-color: #14181c;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.card{    
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 50%;
-    height: max-content;
-    margin: 7%; 
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 50%;
+  height: max-content;
+  margin: 7%;
 }
 
-.divImagem{
-    border-radius: 10px;
+.divImagem {
+  border-radius: 10px;
 }
 
-.divImagem img{
-    width: 300px;
-    height: 100%;
-    border-radius: 10px;
-    border: 1px solid #ffffff;
+.divImagem img {
+  width: 300px;
+  height: 100%;
+  border-radius: 10px;
+  border: 1px solid #ffffff;
 }
 
-.divInformacoes{
-    width: 500px;
-    height: max-content;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Open Sans', sans-serif;
-    color: #ffffff;
-    margin-left: 30px;
+.divInformacoes {
+  width: 500px;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Open Sans', sans-serif;
+  color: #ffffff;
+  margin-left: 30px;
 }
 
-.divInformacoes h4, p{
-    margin: 10px;
-    word-break: break-all;
+.divInformacoes h4,
+p {
+  margin: 10px;
+  word-break: break-all;
 }
 
 /* Responsividade */
-@media (max-width: 361px){
-    .containerNativo{
-        width: 360px;
-        height: 100%;
-        overflow-x: hidden;
-    }
+@media (max-width: 361px) {
+  .containerNativo {
+    width: 360px;
+    height: 100%;
+    overflow-x: hidden;
+  }
 
-    .card{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .divInformacoes{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0;
-    }
+  .divInformacoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
 
-    .divImagem img{
-        width: 200px;
-    }
+  .divImagem img {
+    width: 200px;
+  }
 
-    .divInformacoes h1{
-        font-size: 20px;
-        padding-top: 15px;
-    }
+  .divInformacoes h1 {
+    font-size: 20px;
+    padding-top: 15px;
+  }
 
-    .divInformacoes p{
-        font-size: 13px;
-        width: 300px;
-            
-    }
+  .divInformacoes p {
+    font-size: 13px;
+    width: 300px;
+
+  }
 }
 
-@media (max-width: 550px){
-    .containerNativo{
-        height: 100vh;
-        overflow-x: hidden;
-    }
+@media (max-width: 550px) {
+  .containerNativo {
+    height: 100vh;
+    overflow-x: hidden;
+  }
 
-    .card{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .divInformacoes{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0;
-    }
+  .divInformacoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
 
-    .divImagem img{
-        width: 200px;
-    }
+  .divImagem img {
+    width: 200px;
+  }
 
-    .divInformacoes h1{
-        font-size: 20px;
-        padding-top: 15px;
-    }
+  .divInformacoes h1 {
+    font-size: 20px;
+    padding-top: 15px;
+  }
 
-    .divInformacoes p{
-        font-size: 13px;
-        width: 300px;
-            
-    }
+  .divInformacoes p {
+    font-size: 13px;
+    width: 300px;
+
+  }
 }
 
-@media (min-width: 551px) and (max-width: 811px){
-    .containerNativo{
-        width: 100vw;
-    }
-    .card{
-        display: flex;
-        flex-direction: row;
-        width: 700px;
-        padding: 50px;
-    }
+@media (min-width: 551px) and (max-width: 811px) {
+  .containerNativo {
+    width: 100vw;
+  }
 
-    .containerInformacoes p{
-        width: 500px;
-    }
+  .card {
+    display: flex;
+    flex-direction: row;
+    width: 700px;
+    padding: 50px;
+  }
 
-    .divImagem img{
-        width: 300px;
-    };
+  .containerInformacoes p {
+    width: 500px;
+  }
+
+  .divImagem img {
+    width: 300px;
+  }
+
+  ;
 }
