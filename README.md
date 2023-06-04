@@ -25,19 +25,18 @@
 <h2>Inicialização</h2>
 
 <p>1 - Instale o Node.Js para conseguir rodar o React. Caso possua instalado, pule essa etapa</p>
-<p>2 - No terminal da IDE, use o comando "git clone https://github.com/victoramos1/buscador-filmes" (sem aspas) ou faça o download do arquivo .zip diretamente do Github.</p>
-<p>3 - Ainda com a pasta aberta na IDE, rode o comando "npm install" (sem aspas) no terminal da IDE. É necessário que o caminho mostrado no terminal da IDE seja do local do projeto.</p>
-<p>4 - Gere uma chave para API do The Movie DataBase (TMDB) conforme o link https://developers.themoviedb.org/3/getting-started/introduction
-<p>5 - Cole a sua chave de API gerada no TMDB no lugar de <code>${API_KEY}</code>. Sempre estará dentro de <code>fetch</code>. Os arquivos que você precisará fazer isso são "Main.js", "ResultadoBusca.js" e "Detalhes.js"
+
+<p>2 - No terminal do VS Code (ou na IDE que você estiver utilizando), utilize o comando "git clone https://github.com/victoramos1/buscador-filmes" (sem aspas) caso tenha o Git instalado no computador, ou faça o download do arquivo .zip diretamente do GitHub.</p>
+
+<p>3 - Com a pasta aberta na IDE (o caminho mostrado no terminal precisa levar ao projeto no seu computador, como mostrado na imagem abaixo), execute o comando "npm install" (sem aspas) no terminal da IDE.</p>
+<img src="./src/img/caminho.png">
+
+<p>4 - Gere uma chave para API do The Movie DataBase (TMDB) conforme o link https://developers.themoviedb.org/3/getting-started/introduction e armazene para usar no passo seguinte.</p>
+
+<p>5 - Entre no arquivo ".env.example" e siga os passos</p>
+
 <p>6 - No termina da IDE, rode o comando "npm start" (sem aspas) e aguarde uma aba no seu navegador abrir com o projeto em execução.</p>
-
-
-<h2>Implementações futuras</h2>
-
-<ul>
-    <li>Revisão geral da responsividade</li>
-</ul>
 
 <h2>Status do projeto</h2>
 
-<p>Versão 1.0 finalizada. Atualizações citadas em "implementações futuras" em breve.</p>
+<p>Versão 1.0.1 finalizada.</p>

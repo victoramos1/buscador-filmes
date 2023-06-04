@@ -5,6 +5,12 @@
   padding: 0;
 }
 
+:root {
+  --corTexto: #ffffff;
+  --corFundo: #14181c;
+  --corBotao: #00c030;
+}
+
 .containerNativo {
   background-color: #14181c;
   width: 100%;
@@ -13,7 +19,7 @@
 }
 
 .containerNativo h1 {
-  color: #ffffff;
+  color: var(--corTexto);
   text-align: center;
   padding: 4.375rem 0 1.875rem 0;
 }
@@ -27,10 +33,10 @@
 
 .card {
   width: 12.5rem;
-  border: 0.063rem solid #ffffff;
-  background-color: #14181c;
+  border: 0.063rem solid var(--corTexto);
+  background-color: var(--corFundo);
   border-radius: 0.625rem;
-  color: #ffffff;
+  color: var(--corTexto);
   margin: 1.25rem;
   display: flex;
   flex-direction: column;
@@ -61,11 +67,11 @@
 }
 
 .btn {
-  background-color: #00c030;
+  background-color: var(--corBotao);
   padding: 0.625rem;
   border: none;
   border-radius: 0.625rem;
-  color: #fff;
+  color: var(--corTexto);
   font-weight: bolder;
   margin: 1.25rem;
   width: 9.375rem;
@@ -78,10 +84,10 @@
 }
 
 .semRetorno {
-  background-color: #14181c;
+  background-color: var(--corFundo);
   width: 100vw;
   height: 100vh;
-  color: #ffffff;
+  color: var(--corTexto);
   font-family: 'Open Sans', sans-serif;
   text-align: center;
 }
@@ -118,7 +124,7 @@
   }
 
   .card {
-    margin: 20px auto;
+    margin: 1.25rem auto;
   }
 }
 
