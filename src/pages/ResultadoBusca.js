@@ -29,7 +29,7 @@ export default function ResultadoBusca() {
   if (resultado === true) {
     return (
       <>
-        <Navbar renderizaPagina={renderizaPagina} />
+        <Navbar renderizaPagina={renderizaPagina}/>
         <div className="semRetorno">
           <h1>Carregando</h1>
         </div>

@@ -9,13 +9,13 @@
   background-color: #14181c;
   width: 100%;
   height: 100%;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .containerNativo h1 {
-  font-family: 'Open Sans', sans-serif;
   color: #ffffff;
   text-align: center;
-  padding: 70px 0 30px 0;
+  padding: 4.375rem 0 1.875rem 0;
 }
 
 .containerAjuste {
@@ -26,13 +26,12 @@
 }
 
 .card {
-  width: 200px;
-  border: 1px solid #ffffff;
+  width: 12.5rem;
+  border: 0.063rem solid #ffffff;
   background-color: #14181c;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   color: #ffffff;
-  font-family: 'Open Sans', sans-serif;
-  margin: 20px;
+  margin: 1.25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,12 +39,12 @@
 }
 
 .poster {
-  width: 200px;
-  height: 300px;
+  width: 12.5rem;
+  height: 18.75rem;
 }
 
 .card p {
-  padding: 10px;
+  padding: 0.625rem;
   text-align: center;
   font-weight: bold;
   display: flex;
@@ -58,19 +57,18 @@
 }
 
 .card img {
-  border-radius: 10px 10px 0 0;
+  border-radius: 0.625rem 0.625rem 0 0;
 }
 
 .btn {
   background-color: #00c030;
-  font-family: 'Open Sans', sans-serif;
-  padding: 10px;
+  padding: 0.625rem;
   border: none;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   color: #fff;
   font-weight: bolder;
-  margin: 20px;
-  width: 150px;
+  margin: 1.25rem;
+  width: 9.375rem;
   transition: cubic-bezier(1, 0, 0, 1);
   cursor: pointer;
 }
@@ -94,51 +92,86 @@
 
 /* Responsividade */
 
-@media (max-width: 361px) {
-  .containerAjuste {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 300px;
-  }
-
+@media (min-width: 1px) and (max-width: 400px) {
   .containerNativo h1 {
-    font-size: 20px;
+    font-size: 1.125rem;
   }
 
-  .card {
-    width: 250px;
-  }
-
-  .poster {
-    width: 250px;
+  .containerAjuste {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
   }
 }
 
-@media (max-width: 551px) {
+@media (min-width: 401px) and (max-width: 550px) {
+  .containerNativo h1 {
+    font-size: 1.563rem;
+  }
+
   .containerAjuste {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
     align-items: center;
   }
 
-  .containerNativo h1 {
-    font-size: 22px;
-  }
-
   .card {
-    width: 270px;
-  }
-
-  .poster {
-    width: 270px;
+    margin: 20px auto;
   }
 }
 
-@media (min-width: 551px) and (max-width: 811px) {
+@media (min-width: 551px) and (max-width: 770px) {
+  .containerAjuste {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    height: 28.875rem;
+    margin: 1.25rem;
+  }
+
+  .card p {
+    padding: 0;
+  }
+}
+
+@media (min-width: 771px) and (max-width: 1100px) {
   .containerAjuste {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    height: 28.875rem;
+    margin: 1.25rem;
+  }
+
+  .card p {
+    padding: 0;
+  }
+}
+
+@media (min-width: 1101px) and (max-width: 1450px) {
+  .containerAjuste {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    height: 28.875rem;
+    margin: 1.25rem;
+  }
+
+  .card p {
+    padding: 0;
   }
 }

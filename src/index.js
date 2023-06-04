@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Main from './pages/Main';
+import App from './App';
 import Detalhes from './pages/Detalhes';
 import ResultadoBusca from './pages/ResultadoBusca'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
@@ -8,7 +8,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Main/>
+    element: <App/>
   },
   {
     path: "detalhes/:id",

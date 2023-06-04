@@ -22,71 +22,38 @@
 }
 
 .divImagem {
-  border-radius: 10px;
+  border-radius: 0.625rem;
 }
 
 .divImagem img {
-  width: 300px;
+  width: 18.75rem;
   height: 100%;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   border: 1px solid #ffffff;
 }
 
 .divInformacoes {
-  width: 500px;
+  width: 31.25rem;
   height: max-content;
   display: flex;
   flex-direction: column;
   font-family: 'Open Sans', sans-serif;
   color: #ffffff;
-  margin-left: 30px;
+  margin-left: 1.875rem;
 }
 
 .divInformacoes h4,
 p {
-  margin: 10px;
-  word-break: break-all;
+  margin: 0.625rem;
+  overflow-wrap: normal;
+  word-break: normal;
+  text-align: justify;
 }
 
 /* Responsividade */
-@media (max-width: 361px) {
+@media(min-width: 1px) and (max-width: 700px) {
   .containerNativo {
-    width: 360px;
-    height: 100%;
-    overflow-x: hidden;
-  }
-
-  .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .divInformacoes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-  }
-
-  .divImagem img {
-    width: 200px;
-  }
-
-  .divInformacoes h1 {
-    font-size: 20px;
-    padding-top: 15px;
-  }
-
-  .divInformacoes p {
-    font-size: 13px;
-    width: 300px;
-
-  }
-}
-
-@media (max-width: 550px) {
-  .containerNativo {
+    width: 100vw;
     height: 100vh;
     overflow-x: hidden;
   }
@@ -105,40 +72,38 @@ p {
   }
 
   .divImagem img {
-    width: 200px;
+    width: 12.5rem;
   }
 
   .divInformacoes h1 {
-    font-size: 20px;
-    padding-top: 15px;
+    font-size: 1.25rem;
+    padding-top: 0.938rem;
   }
 
   .divInformacoes p {
-    font-size: 13px;
-    width: 300px;
-
+    font-size: 0.813rem;
+    width: 18.75rem;
   }
 }
 
-@media (min-width: 551px) and (max-width: 811px) {
+@media (min-width: 701px) and (max-width: 1450px) {
   .containerNativo {
     width: 100vw;
+    height: 100vh;
   }
 
   .card {
     display: flex;
     flex-direction: row;
-    width: 700px;
-    padding: 50px;
+    width: 43.75rem;
+    padding: 3.125rem;
   }
 
   .containerInformacoes p {
-    width: 500px;
+    width: 31.25rem;
   }
 
   .divImagem img {
-    width: 300px;
+    width: 18.75rem;
   }
-
-  ;
 }

@@ -12,8 +12,8 @@
 }
 
 .divComponentes img {
-  width: 50px;
-  margin-left: 20px;
+  width: 3.125rem;
+  margin-left: 1.25rem;
 }
 
 .iconeTitulo {
@@ -25,16 +25,16 @@
 }
 
 .iconeTitulo h1 {
-  font-size: 25px;
-  margin-left: 15px;
+  font-size: 1.563rem;
+  margin-left: 0.938rem;
 }
 
 .inputDados {
-  border-radius: 15px 0 0 15px;
-  border: 1px solid #fff;
+  border-radius: 0.938rem 0 0 0.938rem;
+  border: 0.063rem solid #fff;
   font-family: 'Open Sans', sans-serif;
-  height: 30px;
-  margin: 20px 0;
+  height: 1.875rem;
+  margin: 1.25rem 0;
   font-weight: bold;
   color: #000
 }
@@ -49,12 +49,12 @@
   background-color: #00c030;
   font-family: 'Open Sans', sans-serif;
   border: none;
-  width: 100px;
-  padding: 7px;
-  border-radius: 0 15px 15px 0;
+  width: 6.25rem;
+  padding: 0.438rem;
+  border-radius: 0 0.938rem 0.938rem 0;
   color: #ffffff;
   font-weight: bolder;
-  margin-right: 20px;
+  margin-right: 1.25rem;
   cursor: point;
 }
 
@@ -64,7 +64,7 @@
 
 /* Responsividade */
 
-@media (max-width: 361px) {
+@media (min-width: 1px) and (max-width: 650px) {
   .divComponentes {
     display: flex;
     flex-direction: column;
@@ -72,18 +72,6 @@
   }
 
   .iconeTitulo {
-    padding-top: 20px;
-  }
-}
-
-@media (max-width: 551px) {
-  .divComponentes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .iconeTitulo {
-    padding-top: 20px;
+    padding-top: 1.25rem;
   }
 }
