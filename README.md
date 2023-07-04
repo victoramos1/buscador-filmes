@@ -39,4 +39,4 @@
 
 <h2>Status do projeto</h2>
 
-<p>Versão 1.0.1 finalizada.</p>
+<p>Versão 1.0.2 finalizada.</p>
