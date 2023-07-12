@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/buscador-filmes/static/css/main.dd117061.css",
+    "main.js": "/buscador-filmes/static/js/main.d5b3be8d.js",
+    "index.html": "/buscador-filmes/index.html",
+    "main.dd117061.css.map": "/buscador-filmes/static/css/main.dd117061.css.map",
+    "main.d5b3be8d.js.map": "/buscador-filmes/static/js/main.d5b3be8d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dd117061.css",
+    "static/js/main.d5b3be8d.js"
+  ]
+}
