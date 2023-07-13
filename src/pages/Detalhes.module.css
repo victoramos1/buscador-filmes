@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --corTexto: #ffffff;
+}
+
+.containerNativo {
+  background-color: #14181c;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 50%;
+  height: max-content;
+  margin: 7%;
+}
+
+.divImagem {
+  border-radius: 0.625rem;
+}
+
+.divImagem img {
+  width: 18.75rem;
+  height: 100%;
+  border-radius: 0.625rem;
+  border: 1px solid var(--corTexto);
+}
+
+.divInformacoes {
+  width: 31.25rem;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Open Sans', sans-serif;
+  color: var(--corTexto);
+  margin-left: 1.875rem;
+}
+
+.divInformacoes h4,
+p {
+  margin: 0.625rem;
+  overflow-wrap: normal;
+  word-break: normal;
+  text-align: justify;
+}
+
+/* Responsividade */
+@media(min-width: 1px) and (max-width: 700px) {
+  .containerNativo {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .divInformacoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+
+  .divImagem img {
+    width: 12.5rem;
+  }
+
+  .divInformacoes h1 {
+    font-size: 1.25rem;
+    padding-top: 0.938rem;
+  }
+
+  .divInformacoes p {
+    font-size: 0.813rem;
+    width: 18.75rem;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1450px) {
+  .containerNativo {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: row;
+    width: 43.75rem;
+    padding: 3.125rem;
+  }
+
+  .containerInformacoes p {
+    width: 31.25rem;
+  }
+
+  .divImagem img {
+    width: 18.75rem;
+  }
+}
